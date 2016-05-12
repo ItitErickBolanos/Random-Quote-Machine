@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="randomQuoteMachine">
+    <head>
+        <meta charset="utf-8">
+        <title>Random Quote Machine - FreeCodeCamp</title>
+        <link href="../Resources/Bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link href="../Resources/FontAwesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../Resources/Bootstrap/bootstrap-social.css" rel="stylesheet" type="text/css"/>
+        <link href="css/randomQuoteMachine.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body ng-controller="randomQuoteController as rqt">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <div class="panel panel-default quote">
+                      <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12" align="center">
+                                <h3>"{{ randomQuote }}"</h3>
+                            </div>
+                            <div class="col-md-6 col-md-offset-6">
+                                <h4>-{{ by }}</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-md-offset-1">
+                                <a class="btn btn-social-icon btn-twitter" id="tweet-quote" href="">
+                                    <span class="fa fa-twitter"></span>
+                                </a>
+                                <a class="btn btn-social-icon btn-tumblr" id="tumblr-quote" href="">
+                                    <span class="fa fa-tumblr"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-md-offset-4">
+                                <button class="btn btn-primary" ng-click="randomQuoteGenerator.generateRandomQuote(this)">New quote</button>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../Resources/jQuery/jquery-1.12.1.js"></script>
+        <script type="text/javascript" src="../Resources/Bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../Resources/Angular/angular.min.js"></script>
+        <script type="text/javascript" src="js/Class.RandomQuoteGenerator.js"></script>
+        <script type="text/javascript" src="js/randomQuoteMachine.js"></script>
+    </body>
+</html>
